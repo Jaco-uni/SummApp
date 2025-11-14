@@ -1,10 +1,12 @@
 import pandas as pd
 import ast
 import io
+import os
 from config import download_to_s3
 
 
-load_dotenv()
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 
 def pd_dati():
     content = download_to_s3()

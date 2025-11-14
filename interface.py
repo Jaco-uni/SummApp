@@ -134,7 +134,7 @@ if email in df["Email"].values:
 
                                 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
                                 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")      #scarica file direttamente da S3
-                                
+
                                 content = download_to_s3()
                                 df = pd.read_csv(io.StringIO(content))
                                 
@@ -222,7 +222,8 @@ elif email == "":
                         "Classification": classification
                         }
 
-                        load_dotenv()       #scarica file direttamente da S3
+                        AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+                        AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")       #scarica file direttamente da S3
                         content = download_to_s3()
                         df = pd.read_csv(io.StringIO(content))
                         
