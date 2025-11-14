@@ -1,10 +1,13 @@
 import os
-from dotenv import load_dotenv
 import boto3
 import io
 
 # Carica il file .env solo una volta all'avvio
-load_dotenv()
+
+
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+
 
 def get_key(name: str) -> str:      #funzione usata in summarize.py
     value = os.getenv(name)
