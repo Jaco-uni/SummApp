@@ -189,7 +189,7 @@ elif email == "":
                         st.session_state.num_fields = 1
                         del terms[0:i]
 
-
+        st.divider()
         options = ["Computer Science (cs)", "Economics", "Electrical Engineering and Systems Science (eess)", "Mathematics (math)", "Physics", "Quantitative Biology (q-bio)", "Quantitative Finance (q-fin)", "Statistics (stat)"]
         subject = st.pills("Subject", options, selection_mode="multi")
 
