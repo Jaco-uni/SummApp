@@ -17,14 +17,19 @@
 base = "dark"
 
 # Primary accent color.
-primaryColor = "#556b2f"
+primaryColor = "#1DB954"
+
+backgroundColor = "#121212"
+
+# Grigio scuro per i widget interattivi
+secondaryBackgroundColor = "#282828"
 
 
-backgroundColor = 	"#2f4f4f"
+# Bianco per il testo, per massima leggibilità
+textColor = "#FFFFFF"
 
-# Background color used for most interactive widgets.
-secondaryBackgroundColor = "#20b2aa"
+# Font consigliato (opzionale, se vuoi personalizzare ulteriormente)
+font = "sans serif"
 
-# Color used for almost all text.
-textColor = "#000000"
 
+spo
