@@ -8,9 +8,9 @@ import ast
 
 
 st.markdown("""
-    <style>
-    /* Bottoni generici */
-    div.stButton > button {
+<style>
+/* Bottoni generici */
+   div.stButton > button {
         background-color: #1DB954;
         color: white;
         border: 2px solid #1DB954;
@@ -18,49 +18,68 @@ st.markdown("""
         padding: 0.5em 1em;
         font-weight: bold;
         transition: 0.3s ease;
-    }
+}
 
-    /* Hover effect */
-    div.stButton > button:hover {
+/* Hover effect */
+div.stButton > button:hover {
         background-color: #1ed760;
         border-color: #1ed760;
         color: black;
-    }
+}
 
-    /* Bottoni spenti (non selezionati) simulati come disabilitati */
-    div.stButton > button:disabled {
+/* Bottoni spenti (non selezionati) simulati come disabilitati */
+div.stButton > button:disabled {
         background-color: #282828;
         color: #888;
         border: 2px solid #444;
-    }
+}
 
-    /* Dropdown e checkbox */
-    .stSelectbox, .stCheckbox {
+/* Dropdown e checkbox */
+.stSelectbox, .stCheckbox {
         background-color: #282828 !important;
         color: white !important;
-    }
+}
 
-    /* Testo generale */
-    html, body, [class*="css"] {
-        color: white;
-        background-color: #121212;
-    }
-    /* Rimuove l'alone grigio (box-shadow) sui bottoni quando sono selezionati o in focus */
-    div.stButton > button:focus,
-    div.stButton > button:active {
-        outline: none !important;
-        box-shadow: none !important;
-    }
+/* Testo generale */
+html, body, [class*="css"] {
+color: white;
+background-color: #121212;
+}
+/* Rimuove qualsiasi alone o bordo di focus */
+*:focus {
+outline: none !important;
+box-shadow: none !important;
+}
 
-    /* Rimuove l'alone grigio anche dai dropdown e altri input */
-    .stSelectbox:focus,
-    .stTextInput:focus,
-    .stCheckbox:focus {
-        outline: none !important;
-        box-shadow: none !important;
-    }
+/* Bottoni Streamlit */
+button {
+background-color: #1DB954 !important;
+color: white !important;
+border: 2px solid #1DB954 !important;
+font-weight: bold !important;
+transition: 0.3s ease !important;
+}
 
-    </style>
+/* Hover effetto */
+button:hover {
+background-color: #1ed760 !important;
+border-color: #1ed760 !important;
+color: black !important;
+}
+
+/* Dropdown e input */
+select, input, textarea {
+background-color: #282828 !important;
+color: white !important;
+border: 1px solid #1DB954 !important;
+}
+
+/* Rimuove box-shadow da tutti i widget */
+[class^="st"] {
+box-shadow: none !important;
+}
+
+</style>
 """, unsafe_allow_html=True)
 
 # Setup path per importare moduli locali
