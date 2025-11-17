@@ -76,6 +76,7 @@ with st.expander("📘 User Guide", expanded=True):
 nome = st.text_input("Insert your name *")
 cognome = st.text_input("Insert your surname *")
 email = st.text_input("Insert your email *")
+st.write("Fields with * are obligatory")
 st.divider()
 
 
