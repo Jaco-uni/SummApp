@@ -67,8 +67,8 @@ with st.expander("📘 User Guide", expanded=True):
     st.markdown("""
     - This interface allows users to enter their data and select search parameters, similar to the Arxiv interface.
     - A daily email is sent at **7:00 PM** containing summaries and key data from the day's publications.
-    - If a preference has already been registered, it can be modified using the same email.
     - If no papers are published on a given day, **no email will be sent**.
+    - If a preference has already been registered, it can be modified using the same email.
     - To ensure successful submission, wait for the **double confirmation message** after clicking **SAVE**.
     """)
 
