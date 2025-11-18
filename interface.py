@@ -66,7 +66,7 @@ col_i.space("small")
 col_i.image("arkiv.png")
 
 col_t.space("small")
-col_t.title("📄 Paper Search and Text Summarization")
+col_t.title("📄 Paper Search and Summarization")
 
 with st.expander("📘 User Guide", expanded=True):
     st.markdown("""
