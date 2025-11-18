@@ -62,7 +62,7 @@ df = pd.read_csv(io.StringIO(content))
 
 col_i, col_t = st.columns(2)
  # Interfaccia Streamlit
-col_i.space("Small")
+col_i.space("small")
 st.image("arkiv.png")
 col_t.space("stretch")
 
