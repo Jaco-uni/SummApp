@@ -7,7 +7,7 @@
 With a simple and intuitive interface, the app helps you stay informed about the most recent articles in your fields of interest.
 
 🔗 **Try the app here:**  
-[Summapp - Streamlit App](https://summapp.streamlit.app/)
+[Summapp - Streamlit App](https://summapp-arxiv.streamlit.app/)
 You have to register to Streamlit to access
 
 ---
