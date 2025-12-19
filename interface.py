@@ -62,14 +62,10 @@ content = download_to_s3()
 df = pd.read_csv(io.StringIO(content))
 
  # Interfaccia Streamlit
-st.markdown(
-    """
-    <div style="text-align: center;">
-        <img src="Logo_app.png" width="100">
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image("Logo_app.png", width=250)
+
 
 
 st.title("Paper Search and Summarization📄", width="stretch")
@@ -330,6 +326,7 @@ else:
      
 
      
+
 
 
 
