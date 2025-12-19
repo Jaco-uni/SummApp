@@ -281,10 +281,31 @@ else:
                                 )
         else:
                 classification = "all"
+        with stylable_container(
+             "red",
+             css_styles="""
+             button {
+                 background-color: #FF0000;
+             }""",
+            ):
+             buttonr_clicked = st.button("Delete Email", key="buttonr")
+        with stylable_container(
+             "red",
+             css_styles="""
+             write {
+                 background-color: #FF0000;
+             }""",
+            ):
+             email = st.text_input("Insert your email *")
+        
+        if buttonr_clicked:
+           st.write("Success")
+           em = email
+           df = df[df['Email'] = em].reset_index(drop=True)
 
-
+           
         #bottone per salvataggio dati
-        if st.button("🔍 Salva"):
+        if st.button("🔍 Save"):
                 if not nome or not cognome or not email:
                         st.error("Plese, insert values in all fields with *.") #obbligo di compilazione
                 else:
@@ -309,6 +330,7 @@ else:
                         upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
 
                         st.success("File successfully updated on S3.")
+
 
 
 
