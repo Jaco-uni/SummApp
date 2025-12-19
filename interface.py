@@ -62,10 +62,15 @@ content = download_to_s3()
 df = pd.read_csv(io.StringIO(content))
 
  # Interfaccia Streamlit
+st.markdown(
+    """
+    <div style="text-align: center;">
+        <img src="Logo_app.png" width="250">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
-<p align="center">
-  <img src="Logo_app.png" alt="Logo SumXapp" width="250" height="250"/>
-</p>
 
 st.title("Paper Search and Summarization📄", width="stretch")
 
@@ -325,6 +330,7 @@ else:
      
 
      
+
 
 
 
