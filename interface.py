@@ -284,22 +284,8 @@ else:
                 classification = "all"
            
         
-        col_reset, col_save = st.columns([1, 1])
-
-        with col_reset:
-           with stylable_container(
-             "red",
-             css_styles="""
-             button {
-                 background-color: #FF0000;
-             }""",
-            ):
-             buttonr_clicked = st.button("Delete Email", key="buttonr")
-           if buttonr_clicked:
-              email = st.text_input("Insert your email *")
-              df = df[df['Email'] == email].reset_index(drop=True)
-              st.write("Success")
-
+        col_save, col_reset = st.columns([1, 1])
+   
         with col_save:
         #bottone per salvataggio dati
            if st.button("🔍 Save"):
@@ -327,6 +313,23 @@ else:
                            upload_to_s3(df) # Scrivo tutto in memoria e sovrascrivo su S3
    
                            st.success("File successfully updated on S3.")
+
+        with col_reset:
+           with stylable_container(
+             "red",
+             css_styles="""
+             button {
+                 background-color: #FF0000;
+             }""",
+            ):
+             buttonr_clicked = st.button("Delete Email", key="buttonr")
+           if buttonr_clicked:
+              email = st.text_input("Insert your email *")
+              df = df[df['Email'] == email].reset_index(drop=True)
+              st.write("Success")
+
+        
+
 
 
 
