@@ -62,7 +62,10 @@ content = download_to_s3()
 df = pd.read_csv(io.StringIO(content))
 
  # Interfaccia Streamlit
-st.image("arxiv.png")
+
+<p align="center">
+  <img src="Logo_app.png" alt="Logo SumXapp" width="250" height="250"/>
+</p>
 
 st.title("Paper Search and Summarization📄", width="stretch")
 
@@ -322,6 +325,7 @@ else:
      
 
      
+
 
 
 
