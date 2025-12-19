@@ -1,4 +1,7 @@
-![](Logo_app.png)
+<p align="center">
+  <img src="Logo_app.png" alt="Logo SumXapp" width="250" height="250"/>
+</p>
+
 # 📚 Summapp
 **Summapp** is an application designed to keep users updated on the latest publications available on [arXiv](https://arxiv.org/), based on their research preferences and choices.  
 With a simple and intuitive interface, the app helps you stay informed about the most recent articles in your fields of interest.
